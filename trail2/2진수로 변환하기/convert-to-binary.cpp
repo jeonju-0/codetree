@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 int main() {
@@ -12,9 +13,8 @@ int main() {
     }
     v.push_back(n);
 
-    for (int i = v.size()-1; i >= 0; --i) {
-        cout << v[i];
-    }
+    reverse(v.begin(), v.end());
+    for (int x : v) {cout << x;}
 
     return 0;
 }
